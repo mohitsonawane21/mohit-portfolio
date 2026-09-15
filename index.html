@@ -3,110 +3,266 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohit Dinesh Sonawane | Portfolio</title>
+<title>Mohit Sonawane | Portfolio</title>
+
 <style>
-body{
-font-family:Arial,sans-serif;
+*{
 margin:0;
-background:#f4f6f9;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
 }
-header{
-background:#0f172a;
+
+body{
+background:#080808;
+color:#fff;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#111;
+position:sticky;
+top:0;
+}
+
+nav h2{
+color:#ff004f;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
 color:white;
-text-align:center;
-padding:50px 20px;
+text-decoration:none;
 }
-img{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid white;
+
+#header{
+padding:100px 10%;
+text-align:left;
 }
-section{
-padding:40px;
-max-width:1000px;
-margin:auto;
+
+#header h1{
+font-size:55px;
+margin-top:15px;
 }
+
+#header span{
+color:#ff004f;
+}
+
+.container{
+padding:60px 10%;
+}
+
+.section-title{
+font-size:40px;
+margin-bottom:25px;
+color:#ff004f;
+}
+
 .card{
-background:white;
-padding:20px;
-margin:15px 0;
+background:#262626;
+padding:25px;
 border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+margin-bottom:20px;
 }
-ul li{
-margin:8px 0;
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
 }
+
+.skill{
+background:#333;
+padding:15px;
+text-align:center;
+border-radius:8px;
+}
+
 footer{
-background:#0f172a;
-color:white;
 text-align:center;
 padding:20px;
+background:#111;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+#header h1{
+font-size:35px;
+}
 }
 </style>
 </head>
 <body>
+<nav>
+    <h2>Mohit.</h2>
+    <ul>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-<header>
-<h1>Mohit Dinesh Sonawane</h1>
-<p>Computer Engineering Student | Full Stack Developer | SIH 2026 Participant</p>
-</header>
+<section id="header">
+    <p>Computer Engineering Student</p>
+    <h1>Hi, I'm <span>Mohit Sonawane</span></h1>
+    <p>Full Stack Developer | SIH 2026 Participant</p>
+</section>
 
-<section>
-<div class="card">
-<h2>About Me</h2>
-<p>
-I am a Computer Engineering student at Sandip Institute of Engineering and Management, Nashik.
-Passionate about Full Stack Development, Artificial Intelligence, and building innovative technology solutions.
-</p>
-</div>
+<section id="about" class="container">
+    <h2 class="section-title">About Me</h2>
 
-<div class="card">
-<h2>Education</h2>
-<p>B.E. Computer Engineering</p>
-<p>Sandip Institute of Engineering and Management, Nashik</p>
-</div>
+    <div class="card">
+        <p>
+            I am Mohit Dinesh Sonawane, a Computer Engineering student at
+            Sandip Institute of Engineering and Management, Nashik.
+            Passionate about Full Stack Development, Artificial Intelligence,
+            and solving real-world problems through technology.
+            Currently working on LegalLens for Smart India Hackathon 2026
+            and pursuing a Web Development Internship.
+        </p>
+    </div>
 
-<div class="card">
-<h2>Skills</h2>
-<ul>
-<li>HTML5</li>
-<li>CSS3</li>
-<li>JavaScript</li>
-<li>React.js</li>
-<li>Node.js</li>
-<li>Express.js</li>
-<li>MongoDB</li>
-<li>MySQL</li>
-<li>Git & GitHub</li>
-<li>REST APIs</li>
-<li>OCR Integration</li>
-<li>AI Applications</li>
-</ul>
-</div>
+    <div class="card">
+        <h3>Education</h3>
+        <br>
+        <p>B.E. Computer Engineering</p>
+        <p>Sandip Institute of Engineering and Management, Nashik</p>
+    </div>
+</section>
+<section id="skills" class="container">
 
-<div class="card">
-<h2>Projects</h2>
-<h3>LegalLens – Smart India Hackathon 2026</h3>
-<p>AI-powered Legal Metrology Compliance Monitoring Platform.</p>
+    <h2 class="section-title">Skills</h2>
 
-<h3>Portfolio Website</h3>
-<p>Responsive personal portfolio website.</p>
+    <div class="skills">
 
-<h3>Task Management Application</h3>
-<p>Task tracking application with database integration.</p>
-</div>
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React.js</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Express.js</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">REST APIs</div>
+        <div class="skill">AI Applications</div>
+        <div class="skill">Prompt Engineering</div>
 
-<div class="card">
-<h2>Contact</h2>
-<p>Email: mohitsonawane481@gmail.com</p>
-<p>GitHub: github.com/mohitsonawane21</p>
-</div>
+    </div>
+
+</section>
+
+<section class="container">
+
+    <h2 class="section-title">Experience</h2>
+
+    <div class="card">
+        <h3>Web Development Intern</h3>
+        <br>
+        <p>
+            Currently pursuing a Web Development Internship and building
+            responsive websites, GitHub projects, and modern web applications.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Smart India Hackathon 2026</h3>
+        <br>
+        <p>
+            Team member working on LegalLens, an AI-powered Legal Metrology
+            Compliance Monitoring Platform.
+        </p>
+    </div>
+
+</section>
+
+<section class="container">
+
+    <h2 class="section-title">Services</h2>
+
+    <div class="card">
+        <h3>Full Stack Development</h3>
+        <br>
+        <p>
+            Building responsive web applications using modern frontend and backend technologies.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>AI & Automation</h3>
+        <br>
+        <p>
+            Developing intelligent systems using OCR, AI tools, and automation workflows.
+        </p>
+    </div>
+
+</section>
+<section id="projects" class="container">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="card">
+        <h3>LegalLens - Smart India Hackathon 2026</h3>
+        <br>
+        <p>
+            AI-powered Legal Metrology Compliance Monitoring Platform that uses OCR,
+            rule-based validation, and evidence-backed compliance checking.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <br>
+        <p>
+            Responsive portfolio website showcasing skills, projects,
+            education, and achievements.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Task Management Application</h3>
+        <br>
+        <p>
+            Web-based application for managing tasks with CRUD operations
+            and database integration.
+        </p>
+    </div>
+
+</section>
+
+<section id="contact" class="container">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="card">
+        <p><strong>Email:</strong> mohitsonawane481@gmail.com</p>
+        <br>
+        <p><strong>GitHub:</strong> github.com/mohitsonawane21</p>
+        <br>
+        <p><strong>Location:</strong> Nashik, Maharashtra, India</p>
+    </div>
+
 </section>
 
 <footer>
-© 2026 Mohit Dinesh Sonawane
+    <p>© 2026 Mohit Dinesh Sonawane | Full Stack Developer | SIH 2026 Participant</p>
 </footer>
 
 </body>
