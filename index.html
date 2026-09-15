@@ -5,77 +5,97 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mohit Sonawane | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#080808;
-color:white;
+background:#0a0a0a;
+color:#fff;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#ff004f;
+filter:blur(250px);
+opacity:.15;
+top:-200px;
+right:-100px;
+z-index:-1;
 }
 
 nav{
+position:fixed;
+width:100%;
+top:0;
+left:0;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:25px 10%;
-background:#111;
-position:sticky;
-top:0;
-z-index:100;
+padding:20px 10%;
+background:rgba(0,0,0,.8);
+backdrop-filter:blur(10px);
+z-index:1000;
 }
 
 .logo{
-font-size:32px;
-font-weight:bold;
+font-size:28px;
+font-weight:700;
 color:#ff004f;
 }
 
 nav ul{
 display:flex;
+gap:30px;
 list-style:none;
-gap:25px;
 }
 
 nav ul li a{
-color:white;
 text-decoration:none;
-font-size:18px;
-transition:0.3s;
+color:white;
+font-weight:500;
+transition:.3s;
 }
 
 nav ul li a:hover{
 color:#ff004f;
 }
 
-#header{
-padding:80px 10%;
-}
-
 .hero{
+min-height:100vh;
 display:flex;
-justify-content:space-between;
 align-items:center;
-gap:60px;
-min-height:80vh;
+justify-content:space-between;
+padding:120px 10%;
+gap:50px;
+flex-wrap:wrap;
 }
 
 .hero-text{
 flex:1;
+min-width:300px;
 }
 
 .hero-text p{
-font-size:20px;
+font-size:18px;
+color:#ccc;
 }
 
 .hero-text h1{
-font-size:70px;
+font-size:65px;
+line-height:1.1;
 margin:15px 0;
 }
 
@@ -83,109 +103,148 @@ margin:15px 0;
 color:#ff004f;
 }
 
+.hero-btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 30px;
+background:linear-gradient(45deg,#ff004f,#ff4d8d);
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:.4s;
+}
+
+.hero-btn:hover{
+transform:translateY(-5px);
+}
+
 .hero-image{
 flex:1;
-text-align:center;
+display:flex;
+justify-content:center;
 }
 
 .hero-image img{
-width:380px;
-height:480px;
+width:350px;
+height:350px;
+border-radius:50%;
 object-fit:cover;
-border-radius:20px;
-box-shadow:0 0 30px rgba(255,0,79,.4);
-transition:.5s;
-}
-
-.hero-image img:hover{
-transform:scale(1.03);
+border:5px solid #ff004f;
+box-shadow:0 0 40px rgba(255,0,79,.4);
 }
 
 .container{
-padding:80px 10%;
+padding:100px 10%;
 }
 
 .section-title{
-font-size:50px;
-margin-bottom:35px;
+font-size:45px;
 color:#ff004f;
+margin-bottom:40px;
+text-align:center;
 }
 
 .card{
-background:#262626;
-padding:30px;
+background:#141414;
+padding:25px;
 border-radius:15px;
+border:1px solid rgba(255,255,255,.08);
 margin-bottom:25px;
 transition:.4s;
 }
 
 .card:hover{
 transform:translateY(-8px);
-background:#303030;
+box-shadow:0 0 25px rgba(255,0,79,.2);
 }
 
-.skills-grid,
-.service-grid,
-.project-grid{
+.skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:20px;
 }
 
-.skill,
-.service-box,
-.project-card{
-background:#262626;
-padding:25px;
+.skill{
+background:#181818;
+padding:18px;
 border-radius:12px;
-transition:.4s;
 text-align:center;
+font-weight:600;
+transition:.3s;
 }
 
-.skill:hover,
-.service-box:hover{
+.skill:hover{
 background:#ff004f;
-transform:translateY(-10px);
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:#141414;
+padding:25px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
 }
 
 .project-card:hover{
-transform:scale(1.05);
+transform:translateY(-8px);
 }
 
-.contact-box{
-background:#262626;
-padding:30px;
+.project-card h3{
+color:#ff004f;
+margin-bottom:15px;
+}
+
+.achievement-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.achievement{
+background:#141414;
+padding:25px;
 border-radius:15px;
+text-align:center;
 }
 
-input,
-textarea{
-width:100%;
-padding:12px;
-margin-top:10px;
-background:#333;
-border:none;
-border-radius:6px;
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+font-size:18px;
+}
+
+.socials{
+margin-top:25px;
+}
+
+.socials a{
+display:inline-block;
+margin:0 10px;
+padding:12px 18px;
+background:#141414;
+border-radius:10px;
+text-decoration:none;
 color:white;
+transition:.3s;
 }
 
-button{
+.socials a:hover{
 background:#ff004f;
-color:white;
-border:none;
-padding:12px 30px;
-margin-top:15px;
-border-radius:6px;
-cursor:pointer;
-}
-
-button:hover{
-opacity:.9;
 }
 
 footer{
+padding:30px;
 text-align:center;
-padding:25px;
 background:#111;
 margin-top:50px;
 }
@@ -202,8 +261,8 @@ font-size:45px;
 }
 
 .hero-image img{
-width:280px;
-height:350px;
+width:260px;
+height:260px;
 }
 
 nav{
@@ -226,39 +285,31 @@ justify-content:center;
 <div class="logo">Mohit.</div>
 
 <ul>
-<li><a href="#header">Home</a></li>
+<li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#achievements">Achievements</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
-<section id="header">
-
-<div class="hero">
+<section class="hero" id="home">
 
 <div class="hero-text">
-
 <p>Computer Engineering Student</p>
 
-<h1>
-Hi, I'm <span>Mohit</span><br>
-Sonawane
-</h1>
+<h1>Hi, I'm <span>Mohit Sonawane</span></h1>
 
 <p>
-Full Stack Developer |
-AI Enthusiast |
-SIH 2026 Participant
+Full Stack Developer • AI Enthusiast • Smart India Hackathon Participant
 </p>
 
+<a href="#contact" class="hero-btn">Let's Connect</a>
 </div>
 
 <div class="hero-image">
-<img src="profile.png" alt="Mohit Sonawane">
-</div>
-
+<img src="profile.png.jpeg" alt="Mohit Sonawane">
 </div>
 
 </section>
@@ -268,29 +319,16 @@ SIH 2026 Participant
 <h2 class="section-title">About Me</h2>
 
 <div class="card">
-
 <p>
-I am Mohit Dinesh Sonawane, a Computer Engineering student at
-Sandip Institute of Engineering and Management, Nashik.
-
-Passionate about Full Stack Development, Artificial Intelligence,
-and solving real-world problems through technology.
-
-Currently working on LegalLens, an AI-powered Legal Metrology
-Compliance Monitoring Platform for Smart India Hackathon 2026
-while pursuing a Web Development Internship.
+I am Mohit Dinesh Sonawane, a Computer Engineering student at Sandip Institute of Engineering and Management, Nashik. Passionate about Full Stack Development, Artificial Intelligence, Web Technologies and building innovative digital solutions. Currently working on LegalLens for Smart India Hackathon and continuously improving my development skills through real-world projects.
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Education</h3>
 <br>
-
 <p>B.E. Computer Engineering</p>
 <p>Sandip Institute of Engineering and Management, Nashik</p>
-
 </div>
 
 </section>
@@ -311,36 +349,8 @@ while pursuing a Web Development Internship.
 <div class="skill">MySQL</div>
 <div class="skill">Git & GitHub</div>
 <div class="skill">REST APIs</div>
+<div class="skill">OCR Integration</div>
 <div class="skill">AI Applications</div>
-<div class="skill">Prompt Engineering</div>
-
-</div>
-
-</section>
-
-<section class="container">
-
-<h2 class="section-title">Services</h2>
-
-<div class="service-grid">
-
-<div class="service-box">
-<h3>Web Development</h3>
-<br>
-<p>Responsive and modern websites using latest technologies.</p>
-</div>
-
-<div class="service-box">
-<h3>Full Stack Development</h3>
-<br>
-<p>Frontend and Backend web applications.</p>
-</div>
-
-<div class="service-box">
-<h3>AI Solutions</h3>
-<br>
-<p>OCR, Automation and AI-powered systems.</p>
-</div>
 
 </div>
 
@@ -354,25 +364,22 @@ while pursuing a Web Development Internship.
 
 <div class="project-card">
 <h3>LegalLens</h3>
-<br>
 <p>
-AI-powered Legal Metrology Compliance Monitoring Platform.
+AI-powered Legal Metrology Compliance Monitoring Platform developed for Smart India Hackathon.
 </p>
 </div>
 
 <div class="project-card">
 <h3>Portfolio Website</h3>
-<br>
 <p>
-Responsive personal portfolio website.
+Modern responsive portfolio website built using HTML and CSS.
 </p>
 </div>
 
 <div class="project-card">
-<h3>Task Management App</h3>
-<br>
+<h3>Task Management System</h3>
 <p>
-CRUD application with database integration.
+Task tracking and management application with CRUD functionality.
 </p>
 </div>
 
@@ -380,36 +387,47 @@ CRUD application with database integration.
 
 </section>
 
-<section id="contact" class="container">
+<section id="achievements" class="container">
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="achievement-grid">
+
+<div class="achievement">
+<h3>SIH Participant</h3>
+<p>Smart India Hackathon 2026</p>
+</div>
+
+<div class="achievement">
+<h3>Web Development</h3>
+<p>Internship & Practical Projects</p>
+</div>
+
+<div class="achievement">
+<h3>Full Stack Learning</h3>
+<p>Modern Web Technologies</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="container contact">
 
 <h2 class="section-title">Contact Me</h2>
 
-<div class="contact-box">
-
 <p>Email: mohitsonawane481@gmail.com</p>
-<br>
-
-<p>GitHub: github.com/mohitsonawane21</p>
-<br>
-
 <p>Location: Nashik, Maharashtra, India</p>
 
-<br><br>
-
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Your Email">
-
-<textarea rows="6" placeholder="Your Message"></textarea>
-
-<button>Submit</button>
-
+<div class="socials">
+<a href="https://github.com/mohitsonawane21">GitHub</a>
+<a href="https://www.linkedin.com">LinkedIn</a>
 </div>
 
 </section>
 
 <footer>
-© 2026 Mohit Dinesh Sonawane | Full Stack Developer | SIH 2026 Participant
+© 2026 Mohit Dinesh Sonawane | Full Stack Developer
 </footer>
 
 </body>
