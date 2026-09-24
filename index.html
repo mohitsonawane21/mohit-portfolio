@@ -147,8 +147,8 @@ transition:.4s;
 }
 
 .hero-btn:hover{
-transform:translateY(-5px);
-box-shadow:0 0 30px rgba(255,0,79,.5);
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 0 35px rgba(255,0,79,.5);
 }
 
 .hero-photo{
@@ -291,6 +291,8 @@ transition:.3s;
 
 .skill:hover{
 background:#ff004f;
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(255,0,79,.3);
 }
 
 .project-grid{
@@ -448,10 +450,13 @@ background:#ff004f;
 }
 
 footer{
-padding:30px;
+padding:40px;
 text-align:center;
-background:#111;
+background:rgba(255,255,255,.03);
+backdrop-filter:blur(15px);
+border-top:1px solid rgba(255,255,255,.08);
 margin-top:50px;
+color:#cbd5e1;
 }
 
 @media(max-width:768px){
