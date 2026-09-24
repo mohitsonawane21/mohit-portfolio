@@ -19,23 +19,42 @@ scroll-behavior:smooth;
 
 body{
 background:
-radial-gradient(circle at top right, rgba(255,0,79,.18), transparent 35%),
-radial-gradient(circle at bottom left, rgba(59,130,246,.15), transparent 35%),
-linear-gradient(135deg,#0f172a,#111827,#0b1120);
+radial-gradient(circle at top right, rgba(255,0,79,.15), transparent 30%),
+radial-gradient(circle at bottom left, rgba(59,130,246,.12), transparent 30%),
+linear-gradient(
+135deg,
+#0f172a 0%,
+#111827 35%,
+#0b1120 70%,
+#0a0a0a 100%
+);
 color:#fff;
 overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#ff004f;
+filter:blur(250px);
+opacity:.15;
+top:-200px;
+right:-100px;
+z-index:-1;
 }
 
 body::after{
 content:"";
 position:fixed;
-width:500px;
-height:500px;
+width:600px;
+height:600px;
 background:#3b82f6;
-filter:blur(250px);
+filter:blur(280px);
 opacity:.12;
-bottom:-200px;
-left:-100px;
+bottom:-250px;
+left:-150px;
 z-index:-1;
 }
 
@@ -83,7 +102,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:0 10%;
-background:#000;
+background:transparent;
 overflow:hidden;
 }
 
@@ -176,10 +195,24 @@ height:88vh;
 max-width:650px;
 width:auto;
 object-fit:contain;
-border:none;
-border-radius:0;
-box-shadow:none;
+
+border:3px solid rgba(255,255,255,.08);
+border-radius:25px;
+
+box-shadow:
+0 0 20px rgba(255,0,79,.25),
+0 0 50px rgba(255,0,79,.15),
+0 0 80px rgba(59,130,246,.12);
+
+transition:.4s;
 }
+
+.hero-photo img:hover{
+transform:translateY(-8px);
+box-shadow:
+0 0 30px rgba(255,0,79,.35),
+0 0 70px rgba(255,0,79,.20);
+}    
     
 @media(max-width:991px){
 
@@ -227,16 +260,18 @@ text-align:center;
 
 .project-card{
 background:rgba(255,255,255,.05);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(15px);
 padding:25px;
-border-radius:18px;
+border-radius:20px;
 border:1px solid rgba(255,255,255,.08);
+margin-bottom:25px;
 transition:.4s;
+box-shadow:0 8px 30px rgba(0,0,0,.25);
 }
 
 .project-card:hover{
 transform:translateY(-8px);
-box-shadow:0 0 25px rgba(255,0,79,.2);
+box-shadow:0 0 25px rgba(255,0,79,.25);
 }
 
 .skills-grid{
@@ -300,7 +335,7 @@ padding:100px 10%;
 display:grid;
 grid-template-columns:1fr 1.5fr;
 gap:60px;
-background:#000;
+background:transparent;
 }
 
 .contact-title{
