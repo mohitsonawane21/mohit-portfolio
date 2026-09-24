@@ -18,21 +18,24 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0a0a0a;
+background:
+radial-gradient(circle at top right, rgba(255,0,79,.18), transparent 35%),
+radial-gradient(circle at bottom left, rgba(59,130,246,.15), transparent 35%),
+linear-gradient(135deg,#0f172a,#111827,#0b1120);
 color:#fff;
 overflow-x:hidden;
 }
 
-body::before{
+body::after{
 content:"";
 position:fixed;
 width:500px;
 height:500px;
-background:#ff004f;
+background:#3b82f6;
 filter:blur(250px);
-opacity:.15;
-top:-200px;
-right:-100px;
+opacity:.12;
+bottom:-200px;
+left:-100px;
 z-index:-1;
 }
 
@@ -222,16 +225,16 @@ margin-bottom:40px;
 text-align:center;
 }
 
-.card{
-background:#141414;
+.project-card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
 padding:25px;
-border-radius:15px;
+border-radius:18px;
 border:1px solid rgba(255,255,255,.08);
-margin-bottom:25px;
 transition:.4s;
 }
 
-.card:hover{
+.project-card:hover{
 transform:translateY(-8px);
 box-shadow:0 0 25px rgba(255,0,79,.2);
 }
@@ -285,11 +288,13 @@ gap:20px;
 }
 
 .achievement{
-background:#141414;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
 padding:25px;
-border-radius:15px;
+border-radius:18px;
 text-align:center;
 }
+
 .contact-section{
 padding:100px 10%;
 display:grid;
@@ -471,7 +476,7 @@ Sonawane
 </h1>
 
 <p class="hero-desc">
-Full Stack Developer • AI Enthusiast • Smart India Hackathon 2026 Participant
+Full Stack Developer • AI Enthusiast • Computer Vision Developer • Smart India Hackathon Participant
 </p>
 
 <a href="#contact" class="hero-btn">Let's Connect</a>
@@ -491,16 +496,36 @@ Full Stack Developer • AI Enthusiast • Smart India Hackathon 2026 Participan
 <h2 class="section-title">About Me</h2>
 
 <div class="card">
-<p>
-I am Mohit Dinesh Sonawane, a Computer Engineering student at Sandip Institute of Engineering and Management, Nashik. Passionate about Full Stack Development, Artificial Intelligence, Web Technologies and building innovative digital solutions. Currently working on LegalLens for Smart India Hackathon and continuously improving my development skills through real-world projects.
+<p style="font-size:18px; line-height:1.9; color:#d1d5db;">
+
+🚀 I am <strong style="color:#ff004f;">Mohit Dinesh Sonawane</strong>, a Computer Engineering student at
+<strong>Sandip Institute of Engineering and Management, Nashik</strong>.
+
+I am passionate about <span style="color:#ff004f;">Full Stack Development</span>,
+<span style="color:#ff004f;">Artificial Intelligence</span>,
+<span style="color:#ff004f;">Computer Vision</span> and modern software technologies.
+
+Currently, I am working on <strong>LegalLens</strong> as part of the
+<strong>Smart India Hackathon</strong>, focusing on AI-assisted compliance monitoring and digital governance solutions.
+
+In addition, I have developed an <strong>AI Hand Gesture Controller</strong> project through my learning and practical work with <strong>PHN Technology</strong>, where I explored Computer Vision, OpenCV, MediaPipe and real-time gesture recognition.
+
+My goal is to build innovative technology solutions that solve real-world problems while continuously enhancing my skills in software development, AI and emerging technologies.
+
 </p>
 </div>
 
 <div class="card">
-<h3>Education</h3>
+<h3 style="color:#ff004f;">Highlights</h3>
 <br>
-<p>B.E. Computer Engineering</p>
-<p>Sandip Institute of Engineering and Management, Nashik</p>
+
+<p>🏆 Smart India Hackathon Participant</p>
+<p>💻 Full Stack Developer</p>
+<p>🤖 AI & Computer Vision Enthusiast</p>
+<p>🚀 Web Development Intern</p>
+<p>🖐️ AI Hand Gesture Controller Project (PHN Technology)</p>
+<p>📍 Nashik, Maharashtra, India</p>
+
 </div>
 
 </section>
@@ -523,6 +548,12 @@ I am Mohit Dinesh Sonawane, a Computer Engineering student at Sandip Institute o
 <div class="skill">REST APIs</div>
 <div class="skill">OCR Integration</div>
 <div class="skill">AI Applications</div>
+<div class="skill">Python</div>
+<div class="skill">OpenCV</div>
+<div class="skill">MediaPipe</div>
+<div class="skill">PyAutoGUI</div>
+<div class="skill">Prompt Engineering</div>
+<div class="skill">Computer Vision</div>
 
 </div>
 
@@ -555,6 +586,13 @@ Task tracking and management application with CRUD functionality.
 </p>
 </div>
 
+<div class="project-card">
+<h3>AI Hand Gesture Controller</h3>
+<p>
+Developed an AI-powered Hand Gesture Controller using Python, OpenCV, MediaPipe and PyAutoGUI. The system recognizes hand gestures in real-time through a webcam and enables touchless control of cursor movement, scrolling, volume adjustment and media controls.
+</p>
+</div>
+
 </div>
 
 </section>
@@ -578,6 +616,11 @@ Task tracking and management application with CRUD functionality.
 <div class="achievement">
 <h3>Full Stack Learning</h3>
 <p>Modern Web Technologies</p>
+</div>
+
+<div class="achievement">
+<h3>AI Project Developer</h3>
+<p>Built AI Hand Gesture Controller using Computer Vision</p>
 </div>
 
 </div>
